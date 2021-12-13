@@ -13,7 +13,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './inicio.component.html',
   styleUrls: ['./inicio.component.css']
 })
-
 export class InicioComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
@@ -34,6 +33,7 @@ export class InicioComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scroll(0,0)
 
     if(environment.token == ''){
       this.router.navigate(['/entrar'])
